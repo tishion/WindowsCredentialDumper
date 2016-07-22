@@ -30,7 +30,7 @@ void DumpBinary(unsigned char* p, DWORD count)
             row.push_back(*(p + i++));
             if (0 == i % 8)
             {
-                _tprintf(_T("0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X | %c %c %c %c %c %c %c %c \r\n"),
+                _tprintf(_T("0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X | %c %c %c %c %c %c %c %c\r\n"),
                     row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7],
                     isprint(row[0]) ? row[0] : _T('.'),
                     isprint(row[1]) ? row[1] : _T('.'),
@@ -48,7 +48,7 @@ void DumpBinary(unsigned char* p, DWORD count)
         if (!row.empty())
         {
             row.resize(8, 0);
-            _tprintf(_T("0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X | %c %c %c %c %c %c %c %c \r\n"),
+            _tprintf(_T("0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X 0x%02X | %c %c %c %c %c %c %c %c\r\n"),
                 row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7],
                 isprint(row[0]) ? row[0] : _T('.'),
                 isprint(row[1]) ? row[1] : _T('.'),
@@ -93,21 +93,21 @@ void DumpCredential(PCREDENTIAL pCred)
 void PrintHeader()
 {
     _tprintf(
-        _T("*==============================================================================*\r\n")
-        _T("*              oooooo   oooooo     oooo   .oooooo.   oooooooooo.               *\r\n")
-        _T("*               `888.    `888.     .8'   d8P'  `Y8b  `888'   `Y8b              *\r\n")
-        _T("*                `888.   .8888.   .8'   888           888      888             *\r\n")
-        _T("*                 `888  .8'`888. .8'    888           888      888             *\r\n")
-        _T("*                  `888.8'  `888.8'     888           888      888             *\r\n")
-        _T("*                   `888'    `888'      `88b    ooo   888     d88'             *\r\n")
-        _T("*                    `8'      `8'        `Y8bood8P'  o888bood8P'               *\r\n")
-        _T("*                                                                              *\r\n")
-        _T("*                        Windows Credential Dumper (c) Sheen                   *\r\n")
-        _T("*Usage:                                                                        *\r\n")
-        _T("*      wcd [filter]                                                            *\r\n")
-        _T("*E.G:                                                                          *\r\n")
-        _T("*     wcd ms.outlook*                                                          *\r\n")
-        _T("*==============================================================================*\r\n")
+        _T("*=============================================================================*\r\n")
+        _T("*              oooooo   oooooo     oooo   .oooooo.   oooooooooo.              *\r\n")
+        _T("*               `888.    `888.     .8'   d8P'  `Y8b  `888'   `Y8b             *\r\n")
+        _T("*                `888.   .8888.   .8'   888           888      888            *\r\n")
+        _T("*                 `888  .8'`888. .8'    888           888      888            *\r\n")
+        _T("*                  `888.8'  `888.8'     888           888      888            *\r\n")
+        _T("*                   `888'    `888'      `88b    ooo   888     d88'            *\r\n")
+        _T("*                    `8'      `8'        `Y8bood8P'  o888bood8P'              *\r\n")
+        _T("*                                                                             *\r\n")
+        _T("*                        Windows Credential Dumper (c) Sheen                  *\r\n")
+        _T("*Usage:                                                                       *\r\n")
+        _T("*    wcd [filter]                                                             *\r\n")
+        _T("*E.G:                                                                         *\r\n")
+        _T("*    wcd ms.outlook*                                                          *\r\n")
+        _T("*=============================================================================*\r\n")
     );
 }
 

@@ -10,6 +10,7 @@
         else _tprintf(_T("  % 18s:\r\n"), _T(#name));                          \
 } while (0);
 
+
 #define DUMP_DWORD(p, name) do {                                            \
         _tprintf(_T("  % 18s: 0x%08X\r\n"), _T(#name), pCred->name);        \
     } while (0);
@@ -102,7 +103,7 @@ void PrintHeader()
         _T("*                   `888'    `888'      `88b    ooo   888     d88'            *\r\n")
         _T("*                    `8'      `8'        `Y8bood8P'  o888bood8P'              *\r\n")
         _T("*                                                                             *\r\n")
-        _T("*                        Windows Credential Dumper (c) Sheen                  *\r\n")
+        _T("*                        Windows Credential Dumper (C) Sheen                  *\r\n")
         _T("*Usage:                                                                       *\r\n")
         _T("*    wcd [filter]                                                             *\r\n")
         _T("*E.G:                                                                         *\r\n")
@@ -142,6 +143,8 @@ int _tmain(int argc, TCHAR *argv[])
             DumpCredential(ppCredentialList[i]);
             _tprintf(_T("\r\n"), i);
         }
+
+		::CredFree(ppCredentialList);
     }
     else
     {
